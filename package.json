@@ -1,0 +1,19 @@
+{
+  "name": "domohome-server",
+  "version": "0.0.1",
+  "description": "OpenHome Central is a open-source domotic solution",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "open-source",
+    "domotic"
+  ],
+  "author": "Mathieu Lallemand",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "express": "^4.13.3",
+    "pi-gpio": "0.0.8",
+  }
+}
