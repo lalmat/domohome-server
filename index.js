@@ -23,10 +23,7 @@ app.get('/getItem', function (req, res) {
   res.send(domo.config[item]);
 });
 
-// Serves all the libs files
-app.use('/vuejs', express.static(__dirname+'/node_modules/vue/dist/'));
-app.use('/minified', express.static(__dirname+'/node_modules/minified/'));
-app.use('/', express.static(__dirname+'/assets/'));
+//TODO: Add authentication Layer
 
 var server = app.listen(port);
 console.log("API Ready");
