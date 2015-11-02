@@ -11,25 +11,27 @@ You could connect anything instead of a led (like a 220v relay !) and command th
 It miss a decent authentication method (I'm working on it)
 
 ## Installation
-First of all, you need to install nodeJs on your rPI. To do it without tears you can use this method :  
-<code>
+First of all, you need to install nodeJs on your rPI. Assuming that you already have a debian running on your PI, you can install nodeJs without tears using theses lines on your favorite terminal:  
+```batch
 wget http://node-arm.herokuapp.com/node_latest_armhf.deb   
 sudo dpkg -i node_latest_armhf.deb
-</code>  
+```
 
-Then, you must install "quick2wire-gpio-admin" (https://github.com/quick2wire/quick2wire-gpio-admin). Take care. It's a bit tricky because you may need to patch the file "src/gpio-admin.c".
+Then, you must install "quick2wire-gpio-admin" (https://github.com/quick2wire/quick2wire-gpio-admin).
 
-Change line 30 to :
-<code>  
+Take care. It's a bit tricky because you may need to patch the file "src/gpio-admin.c". Change line 30 to :
+```C
 int size = snprintf(path, PATH_MAX, "/sys/class/gpio/gpio%u/%s", pin, filenam$
-</code>
+```
 
 then <code>make</code> and <code>make install</code>.
 
-Once you've done this, you can git clone this repo and finally :
-<code>  
+Once you've done this, you can finally :
+```batch
+git clone https://github.com/lalmat/domohome-server
+cd domohome-server
 npm install  
 node index.js
-</code>
+```
 
 Have a nice day !
