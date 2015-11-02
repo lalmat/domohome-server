@@ -10,10 +10,14 @@
     "open-source",
     "domotic"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lalmat/domohome-server"
+  },
   "author": "Mathieu Lallemand",
   "license": "GPL-3.0",
   "dependencies": {
     "express": "^4.13.3",
-    "pi-gpio": "0.0.8",
+    "pi-gpio": "0.0.8"
   }
 }
